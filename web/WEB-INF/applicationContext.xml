@@ -17,9 +17,7 @@
         <mvc:annotation-driven />
         <context:component-scan base-package="controllers" />
         <context:component-scan base-package="dao" />
-        <context:component-scan base-package="model" />
         <mvc:resources mapping="/resources/**" location="/resources/" />
-        
         
 
 </beans>

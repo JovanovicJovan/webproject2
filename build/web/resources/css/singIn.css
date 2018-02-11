@@ -1,16 +1,5 @@
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Nunito', sans-serif;
-    color: #384047;
-}
-
-form {
-    max-width: 300px;
+form#formaSign {
     margin: 10px auto;
     padding: 10px 20px;
     background: #f4f7f8;
@@ -22,18 +11,18 @@ h1 {
     text-align: center;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea,
-select {
+#formaSign input[type="text"],
+#formaSign input[type="password"],
+#formaSign input[type="date"],
+#formaSign input[type="datetime"],
+#formaSign input[type="email"],
+#formaSign input[type="number"],
+#formaSign input[type="search"],
+#formaSign input[type="tel"],
+#formaSign input[type="time"],
+#formaSign input[type="url"],
+#formaSign textarea,
+#formaSign select {
     background: rgba(255,255,255,0.1);
     border: none;
     font-size: 16px;
@@ -48,18 +37,18 @@ select {
     margin-bottom: 30px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+#formaSign input[type="radio"],
+#formaSign input[type="checkbox"] {
     margin: 0 4px 8px 0;
 }
 
-select {
+#formaSign select {
     padding: 6px;
     height: 32px;
     border-radius: 2px;
 }
 
-button {
+#formaSign button {
     padding: 19px 39px 18px 39px;
     color: #FFF;
     background-color: #4bc970;
@@ -74,27 +63,27 @@ button {
     margin-bottom: 10px;
 }
 
-fieldset {
+#formaSign fieldset {
     margin-bottom: 30px;
     border: none;
 }
 
-legend {
+#formaSign legend {
     font-size: 1.4em;
     margin-bottom: 10px;
 }
 
-label {
+#formaSign label {
     display: block;
     margin-bottom: 8px;
 }
 
-label.light {
+#formaSign label.light {
     font-weight: 300;
     display: inline;
 }
 
-.number {
+#formaSign .number {
     background-color: #5fcf80;
     color: #fff;
     height: 30px;
@@ -110,7 +99,7 @@ label.light {
 
 @media screen and (min-width: 480px) {
 
-    form {
+    form#formaSign {
         max-width: 480px;
     }
 

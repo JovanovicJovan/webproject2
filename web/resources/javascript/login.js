@@ -8,3 +8,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+$("#signUpclose").on( "click", function() {
+        $('#myModal').modal('hide');  
+});
+    

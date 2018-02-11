@@ -22,7 +22,7 @@
         <property name="dataSource" ref="dataSource" />
         <property name="packagesToScan">
             <list>
-                <value>NakitShop.model</value>           
+                <value>webproject.model</value>           
             </list>
         </property>
         <property name="hibernateProperties">
@@ -60,7 +60,7 @@
     <bean id="articleDAO"
           class="dao.articleDAO"/>
     
-    
+
     
     <bean id="dataSource"
         class="org.springframework.jdbc.datasource.DriverManagerDataSource"
@@ -68,5 +68,8 @@
         p:url="${jdbc.url}"
         p:username="${jdbc.username}"
         p:password="${jdbc.password}"/>
+    
+   
+    
     
 </beans>

@@ -45,5 +45,19 @@ Contributor(s):
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/project?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
+    <mapping resource="model/UserTopic.hbm.xml"/>
+    <mapping resource="model/Images.hbm.xml"/>
+    <mapping resource="model/Subtopics.hbm.xml"/>
+    <mapping resource="model/Likes.hbm.xml"/>
+    <mapping resource="model/Tips.hbm.xml"/>
+    <mapping resource="model/UserSubtopic.hbm.xml"/>
+    <mapping resource="model/TipArticle.hbm.xml"/>
+    <mapping resource="model/Users.hbm.xml"/>
+    <mapping resource="model/Company.hbm.xml"/>
+    <mapping resource="model/Comments.hbm.xml"/>
+    <mapping resource="model/Articles.hbm.xml"/>
+    <mapping resource="model/ImageArticle.hbm.xml"/>
+    <mapping resource="model/SeenArticles.hbm.xml"/>
+    <mapping resource="model/Topics.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

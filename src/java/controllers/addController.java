@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 import java.nio.file.Paths;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -30,7 +31,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 //Kontroler za dodavanje artikla i rad sa njima
 @Controller
-@PropertySource("classpath:application.properties")
 public class addController {
     
     @Autowired
@@ -42,12 +42,13 @@ public class addController {
         return "addArticle";
     }
     
+    
     @RequestMapping(value = "/addArticle", method=RequestMethod.POST)
-    public @ResponseBody String addArticleInDatabase(@RequestParam("file") MultipartFile file, ModelMap model, HttpServletRequest request) throws IOException{
+    public String addArticleInDatabase(ModelMap model, HttpServletRequest request, @RequestParam("file") MultipartFile file){
         System.out.println("USLOOOOOOOOOOOOOOO");
         
         
-        
+        /*
         Part filePart = null;
         BufferedImage image = null;
         File f;
@@ -65,6 +66,7 @@ public class addController {
         } catch (ServletException ex) { 
             
         }
+        */
         return "index";   
     }
 }

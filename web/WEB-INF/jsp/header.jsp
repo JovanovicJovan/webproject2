@@ -11,10 +11,134 @@
         <base href="/webproject/" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="resources/css/login.css" rel="stylesheet" type="text/css">
-        <link href="/resources/javascript/login.js" type="text/javascript">
-        
+        <link href="resources/css/singIn.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+      <div id="id01">
+            <div class="wrapper fadeInDown">
+                <div id="formContent">
+                    <!-- Tabs Titles -->
+                    <h2 class="active"> Sign In </h2>
+                        <a id="signUpclose" target="_blank" href="#" data-toggle="modal" data-target="#myModal1"><h2 class="inactive underlineHover">Sign Up </h2></a>
+
+                    <!-- Icon -->
+                    <div class="fadeIn first">
+                        <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+                    </div>
+                    <p><b>${again}</b></p>
+                    <!-- Login Form -->
+                    <form action="login" method="post">
+                        <input type="text" id="login" class="fadeIn second" name="user_email" placeholder="login">
+                        <input type="password" id="password" class="fadeIn third" name="user_password" placeholder="password">
+                        <input type="submit" class="fadeIn fourth" value="Log In">
+                    </form>
+
+                    <!-- Remind Passowrd -->
+                    <div id="formFooter">
+                        <a class="underlineHover" href="#">Forgot Password?</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+                 
+
+  </div>
+        </div>
+                    
+                    <div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+                    
+      <form action="singin" id="formaSign" method="post">
+             
+            <h1>Sign Up</h1>
+            
+            <fieldset>
+                <legend><span class="number">1</span>Your basic info</legend>
+                <label for="name">First name:</label>
+                <input type="text" id="name" name="user_name" required="true">
+                
+                <label for="name">Last name:</label>
+                <input type="text" id="lastname" name="user_surname" required="true">
+                
+                <label for="name">Company:</label>
+                <input type="text"  name="company" required="true">
+                
+                <label for="name">Country:</label>
+                <input type="text" id="name2" name="country" required="true">
+                
+                <label for="name">City:</label>
+                <input type="text" id="name3" name="city" required="true">
+                
+                <label for="name">Job title:</label>
+                <input type="text" id="name4" name="job_title" required="true">
+                
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" required="true">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="user_password" required="true">
+                <!--
+                <label>Age:</label>
+                <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+                <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>
+                -->
+            </fieldset>
+            
+            <fieldset>
+                <legend><span class="number">2</span>Your profile</legend>
+                <label for="name">Job title:</label>
+                <input type="text" id="name2" name="job_title" required="true">
+            </fieldset>
+            <fieldset>
+                <label for="job">Job Role:</label>
+                <select id="job" name="user_job" required="true">
+                    <optgroup label="Web">
+                        <option value="frontend_developer">Front-End Developer</option>
+                        <option value="php_developor">PHP Developer</option>
+                        <option value="python_developer">Python Developer</option>
+                        <option value="rails_developer"> Rails Developer</option>
+                        <option value="web_designer">Web Designer</option>
+                        <option value="WordPress_developer">WordPress Developer</option>
+                    </optgroup>
+                    <optgroup label="Mobile">
+                        <option value="Android_developer">Androild Developer</option>
+                        <option value="iOS_developer">iOS Developer</option>
+                        <option value="mobile_designer">Mobile Designer</option>
+                    </optgroup>
+                    <optgroup label="Business">
+                        <option value="business_owner">Business Owner</option>
+                        <option value="freelancer">Freelancer</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="secretary">Secretary</option>
+                        <option value="maintenance">Maintenance</option>
+                    </optgroup>
+                </select>
+                
+                <label>Topics:</label>
+                <input type="checkbox" id="development" value="topic1" name="Topic"><label class="light" for="development">Topic1</label><br>
+                <input type="checkbox" id="design" value="topic2" name="Topic"><label class="light" for="design">Topic2</label><br>
+                <input type="checkbox" id="business" value="topic3" name="Topic"><label class="light" for="business">Topic3</label>
+                <br/><br/>
+                <label>Subtopics:</label>
+                <input type="checkbox" id="development" value="Subtopic1" name="Subtopic"><label class="light" for="development">Subtopic1</label><br>
+                <input type="checkbox" id="design" value="Subtopic2" name="Subtopic"><label class="light" for="design">Subtopic2</label><br>
+                <input type="checkbox" id="business" value="Subtopic3" name="Subtopic"><label class="light" for="business">Subtopic3</label>
+                
+            </fieldset>
+            <button type="submit">Sign Up</button>
+        </form>
+                    
+                    </div>
+                        </div>
+                    
+                    
+                    
+        
         <div id="header" class="header-layout-1">
             <div class="rst-topbar social">
                 <div class="pull-left">
@@ -30,8 +154,8 @@
                 <div class="pull-right">
                     <ul class="rst-list-social">
                         <% if(request.getSession().getAttribute("email") == null){ %>
-                        <li><a target="_blank" href="singIn.html"><b>SING IN</b></a></li>
-                        <li><a target="_blank" href="login.html"><b>LOG IN</b></a></li>
+                        <li><a target="_blank" href="#"  data-toggle="modal" data-target="#myModal1"><b>SING IN</b></a></li>
+                        <li ><a target="_blank" href="#"  data-toggle="modal" data-target="#myModal"><b>LOG IN</b></a></li>
                         <% } else { %>
                         <li><a target="_blank" href="logout.html"><b>PROFILE</b></a></li>
                         <li><a target="_blank" href="addArticle.html"><b>ADD</b></a></li>
@@ -186,5 +310,11 @@
                 </nav>
             </div>	
         </div>
+                       
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="resources/javascript/login.js"></script>
+    <script>
+        $("body").show();
+            </script>
 </html>
